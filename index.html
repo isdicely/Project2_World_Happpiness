@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>World Happiness/Resilience</title>
 </head>
 <body>
-   
+  <!-- Using bootstrap for navbar logo "Dashboard" -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light" style="background-color: #0f4a61;">
+    <a class="navbar-brand mr-auto" href="landing_page.html">Dashboard</a>
+    <!-- Adding a colapsible button as screen size decreases -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar nav ml-auto">
+            <!-- Dropdown menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Plots</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="latitude_vs_max_temperature.html">Max Temperature</a>
+                <a class="dropdown-item" href="latitude_vs_humidity.html">Humidity</a>
+                <a class="dropdown-item" href="latitude_vs_cloudiness.html">Cloudiness</a>
+                <a class="dropdown-item" href="latitude_vs_wind_speed.html">Wind Speed</a>
+                </div>
+            <!-- Links -->
+            <li class="nav-item">
+                <a class="nav-link" href="comparisons.html">Comparisons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- The sidebar -->
+<div class="sidebar">
+    <p class="p_sidebar">Visualizations</p>
+    <a href="latitude_vs_max_temperature.html">
+        <img src="visualizations/Fig1_Lat_MaxTemp.png" alt="Latitude vs. Max Temperature" style="width:150px;height:100px";>
+        Latitude vs. Max Temperature</a>
+    <br>
+    <a href="latitude_vs_humidity.html">
+        <img src="visualizations/Fig2_Lat_Humidity.png" alt="Latitude vs. Humidity" style="width:150px;height:100px";>
+        Latitude vs. Humidity</a>
+    <br>
+    <a href="latitude_vs_cloudiness.html">
+        <img src="visualizations/Fig3_Lat_Cloudiness.png" alt="Latitude vs. Cloudiness" style="width:150px;height:100px";>
+        Latitude vs. Cloudiness</a>
+    <br>
+    <a href="latitude_vs_wind_speed.html">
+        <img src="visualizations/Fig4_Lat_WindSpeed.png" alt="Latitude vs. Wind Speed" style="width:150px;height:100px";>
+        Latitude vs. Wind Speed</a>
+</div> 
     
 
 
