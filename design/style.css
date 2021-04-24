@@ -1,8 +1,8 @@
-body {
+/* body {
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.3)), url(worldhappine.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
-}
+} */
 
 .navbar-expand-md{
     background-color: teal;
@@ -44,4 +44,13 @@ body {
 .sidebar a:hover {
     color: #f1f1f1;
   }
-  
+
+  .rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, rgba(0, 0, 255, 0.609), green, yellow, orange, red);
+  }
+.intro-section{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 200px;
+}
+
