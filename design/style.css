@@ -1,56 +1,18 @@
-/* body {
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.3)), url(worldhappine.jpg);
-    background-size: 100% 100%;
-    background-attachment: fixed;
-} */
-
-.navbar-expand-md{
-    background-color: teal;
-}
-@media only screen and (max-width: 600px) {
-    .nav{ 
-        background-color: teal;
-        color: darkgrey; 
-    } 
-    .navbar-brand{ 
-        background-color: teal;
-        color: darkgray; 
-    }
+.rainbow-text {
+  background-image: linear-gradient(
+    to right,
+    rgb(138, 83, 138),
+    rgb(105, 63, 134),
+    rgba(68, 68, 146, 0.6),
+    rgb(65, 143, 65),
+    rgb(231, 231, 142),
+    rgb(187, 137, 44),
+    rgb(212, 66, 66)
+  );
 }
 
-/* Style the sidebar - fixed full height */
-.sidebar {
-    height: 90%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 100;
-    left: 0;
-    background-color: teal;
-    overflow-x: scroll;
-    padding-top: 16px;
-  }
-  
-  /* Style sidebar links */
-.sidebar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    display: block;
-  }
-  
-  /* Style links on mouse-over */
-.sidebar a:hover {
-    color: #f1f1f1;
-  }
-
-  .rainbow-text {
-    background-image: linear-gradient(to left, violet, indigo, rgba(0, 0, 255, 0.609), green, yellow, orange, red);
-  }
-.intro-section{
-    max-width: 500px;
-    margin: auto;
-    margin-top: 200px;
+.intro-section {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 200px;
 }
-
