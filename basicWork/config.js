@@ -1,48 +1,71 @@
+countryList = []
+dystopiaResidual = []
+economyGDP = []
+family = []
+freedom = []
+generosity = []
+happinessRank = []
+healthLE = []
+trustGov = []
+year = []
+
 d3.csv("TOTAL_2019_2020.csv").then(function(data) {
   console.log("This is the csv data:" , data);
-  var countryList= data.map(function(happinessDesc){
+  var countryListA= data.map(function(happinessDesc){
     return happinessDesc["Country"]
   }); 
-  var dystopiaResidual= data.map(function(happinessDesc){
+  var dystopiaResidualA= data.map(function(happinessDesc){
     return happinessDesc["Dystopia Residual"]
   }); 
-  var economyGDP= data.map(function(happinessDesc){
+  var economyGDPA= data.map(function(happinessDesc){
     return happinessDesc["Economy (GDP per Capita)"]
   }); 
-  var family = data.map(function(happinessDesc){
+  var familyA = data.map(function(happinessDesc){
     return happinessDesc["Family"]
   }); 
-  var freedom = data.map(function(happinessDesc){
+  var freedomA = data.map(function(happinessDesc){
     return happinessDesc["Freedom"]
   }); 
-  var generosity = data.map(function(happinessDesc){
+  var generosityA = data.map(function(happinessDesc){
     return happinessDesc["Generosity"]
   }); 
-  var happinessRank = data.map(function(happinessDesc){
+  var happinessRankA = data.map(function(happinessDesc){
     return happinessDesc["Happiness Rank"]
   }); 
-  var healthLE= data.map(function(happinessDesc){
+  var healthLEA = data.map(function(happinessDesc){
     return happinessDesc["Health (Life Expectancy)y"]
   }); 
-  var trustGov = data.map(function(happinessDesc){
+  var trustGovA = data.map(function(happinessDesc){
     return happinessDesc["Trust (Government Corruption)"]
   }); 
-  var year = data.map(function(happinessDesc){
+  var yearA = data.map(function(happinessDesc){
     return happinessDesc["Year"]
   }); 
 
-  console.log("Country List:" , countryList);
-  console.log("Dystopia Residual List:", dystopiaResidual);
-  console.log("Economy GDP List:" , economyGDP);
-  console.log("Family List:" , family);
-  console.log("Freedom List:" , freedom);
-  console.log("Generosity List:" , generosity);
-  console.log("Happiness Rank List:" , happinessRank);
-  console.log("Health (Life Expectancy) List:" , healthLE);
-  console.log("Trust (Gov. Corruption) List:" , trustGov);
-  console.log("Year List:" , year);
+  console.log("Country List:" , countryListA);
+  console.log("Dystopia Residual List:", dystopiaResidualA);
+  console.log("Economy GDP List:" , economyGDPA);
+  console.log("Family List:" , familyA);
+  console.log("Freedom List:" , freedomA);
+  console.log("Generosity List:" , generosityA);
+  console.log("Happiness Rank List:" , happinessRankA);
+  console.log("Health (Life Expectancy) List:" , healthLEA);
+  console.log("Trust (Gov. Corruption) List:" , trustGovA);
+  console.log("Year List:" , yearA);
 
 
+  countryList.push(countryListA)
+  dystopiaResidual.push(dystopiaResidualA)
+  economyGDP.push(economyGDPA)
+  family.push(familyA)
+  freedom.push(freedomA)
+  generosity.push(generosityA)
+  happinessRank.push(happinessRankA)
+  healthLE.push(healthLEA)
+  trustGov.push(trustGovA)
+  year.push(yearA)
+
+  
   const config = {
                 type: 'polarArea',
                 data: data,
