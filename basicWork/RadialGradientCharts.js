@@ -1,5 +1,35 @@
 
 //   html file shold import chart.js
+
+// 4. SETUP SECTION
+// not sure if this belongs at the end - might need to be at the beginning - check that
+
+const DATA_COUNT = 5;
+// this is responsible for 5 diff wedges - can add more
+Utils.srand(110);
+// randomization function thing - doesnt change too much - can delete this
+
+const chartColors = Utils.CHART_COLORS;
+const colors = [chartColors.red, chartColors.orange, chartColors.yellow, chartColors.green, chartColors.blue];
+// adding in colors to the chart; add more colors HERE if you add more slices
+
+const cache = new Map();
+let width = null;
+let height = null;
+
+const actions = [
+  {
+    name: 'Randomize',
+    handler(chart) {
+      chart.data.datasets.forEach(dataset => {
+        dataset.data = generateData();
+      });
+      chart.update();
+    }
+  },
+];
+// this can be removed bc it's just a randomize button
+
 // 1. CREATERADIALGRADIENT3 SECTION - createRadialGradient3 c1/c2/c3 are colors
 function createRadialGradient3(context, c1, c2, c3) {
   const chartArea = context.chart.chartArea;
@@ -39,6 +69,27 @@ function createRadialGradient3(context, c1, c2, c3) {
   return gradient;
 }
 
+// 3 DATA SECTION
+
+function generateData() {
+    return Utils.numbers({
+      count: DATA_COUNT,
+      min: 0,
+      max: 100
+    });
+  }
+//   this is creating random numbers between 1 and 100 - this is where we'd change this 
+// function to pull from our dataset; look into what the output of that is and handle our
+// own data accordingly - this is probably different from how we need to extract ours
+  
+  const data = {
+    labels: Utils.months({count: DATA_COUNT}),
+    datasets: [{
+      data: generateData()
+    }]
+  };
+// this is the important part that calls the data - 
+
 // 2. CONFIG SECTION
 // setting up chart type and it's infrastructure for when the data is populated
 const config = {
@@ -69,53 +120,7 @@ const config = {
       }
     }
   };
-
-// 3 DATA SECTION
-
-function generateData() {
-    return Utils.numbers({
-      count: DATA_COUNT,
-      min: 0,
-      max: 100
-    });
-  }
-//   this is creating random numbers between 1 and 100 - this is where we'd change this 
-// function to pull from our dataset; look into what the output of that is and handle our
-// own data accordingly - this is probably different from how we need to extract ours
-  
-  const data = {
-    labels: Utils.months({count: DATA_COUNT}),
-    datasets: [{
-      data: generateData()
-    }]
+  module.exports = {
+    actions,
+    config,
   };
-// this is the important part that calls the data - 
-
-// 4. SETUP SECTION
-// not sure if this belongs at the end - might need to be at the beginning - check that
-
-const DATA_COUNT = 5;
-// this is responsible for 5 diff wedges - can add more
-Utils.srand(110);
-// randomization function thing - doesnt change too much - can delete this
-
-const chartColors = Utils.CHART_COLORS;
-const colors = [chartColors.red, chartColors.orange, chartColors.yellow, chartColors.green, chartColors.blue];
-// adding in colors to the chart; add more colors HERE if you add more slices
-
-const cache = new Map();
-let width = null;
-let height = null;
-
-const actions = [
-  {
-    name: 'Randomize',
-    handler(chart) {
-      chart.data.datasets.forEach(dataset => {
-        dataset.data = generateData();
-      });
-      chart.update();
-    }
-  },
-];
-// this can be removed bc it's just a randomize button
