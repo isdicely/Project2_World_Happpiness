@@ -1,0 +1,21 @@
+var NewCountryList = []
+var NewYear = [] 
+var NewHappinessRank = []
+var NewEconomyGDP = []
+var NewFamily = []
+var NewHealthLE = []
+var NewFreedom = []
+var NewTrustGov = []
+var NewGenerostiy = []
+var NewDystopiaResidual = []
+
+NewCountryList = countryList.flat();
+NewYear = year.flat();
+NewHappinessRank = happinessRank.flat(); 
+NewEconomyGDP = economyGDP.flat(); 
+NewFamily = family.flat(); 
+NewHealthLE = healthLE.flat(); 
+NewFreedom = freedom.flat(); 
+NewTrustGov = trustGov.flat(); 
+NewGenerostiy = generosity.flat(); 
+NewDystopiaResidual = dystopiaResidual.flat(); 
