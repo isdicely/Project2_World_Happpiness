@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div>
         <canvas id="myChart"></canvas>
     </div>
+
+    <select id="selCountry" onchange="optionCountry(this.value)"></select>
+
+
+    
     <script type="text/javascript" src="config.js"></script>
-    <script type="text/javascript" src="RadialGradientCharts.js"></script>
     <script type="text/javascript" src="dataInput.js"></script>
+    <script type="text/javascript" src="selectorWork.js"></script>
+    <script type="text/javascript" src="variablesforbarchart.js"></script>
 
 
 </body>
