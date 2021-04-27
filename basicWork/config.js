@@ -44,7 +44,7 @@ d3.csv("TOTAL_2019_2020.csv").then(function(data) {
     return happinessDesc["Happiness Rank"]
   }); 
   var healthLEA = data.map(function(happinessDesc){
-    return happinessDesc["Health (Life Expectancy)y"]
+    return happinessDesc["Health (Life Expectancy)"]
   }); 
   var trustGovA = data.map(function(happinessDesc){
     return happinessDesc["Trust (Government Corruption)"]
