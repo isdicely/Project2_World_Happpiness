@@ -9,6 +9,17 @@ healthLE = []
 trustGov = []
 year = []
 
+NewCountryList = []
+NewYear = [] 
+NewHappinessRank = []
+NewEconomyGDP = []
+NewFamily = []
+NewHealthLE = []
+NewFreedom = []
+NewTrustGov = []
+NewGenerostiy = []
+NewDystopiaResidual = []
+
 d3.csv("TOTAL_2019_2020.csv").then(function(data) {
   console.log("This is the csv data:" , data);
   var countryListA= data.map(function(happinessDesc){
@@ -65,6 +76,16 @@ d3.csv("TOTAL_2019_2020.csv").then(function(data) {
   trustGov.push(trustGovA)
   year.push(yearA)
 
+  NewCountryList = countryListA.flat(1);
+  NewYear = yearA.flat(1);
+  NewHappinessRank = happinessRankA.flat(1); 
+  NewEconomyGDP = economyGDPA.flat(1); 
+  NewFamily = familyA.flat(1); 
+  NewHealthLE = healthLEA.flat(1); 
+  NewFreedom = freedomA.flat(1); 
+  NewTrustGov = trustGovA.flat(1); 
+  NewGenerostiy = generosityA.flat(1); 
+  NewDystopiaResidual = dystopiaResidualA.flat(1); 
   
   const config = {
                 type: 'polarArea',
