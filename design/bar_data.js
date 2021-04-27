@@ -24,6 +24,6 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   
 
     
-  // Create event handler, set on chage
-  countryDropdownMenuSelection.on("input", updateTable);
+//   // Create event handler, set on chage
+//   countryDropdownMenuSelection.on("input", updateTable);
   
