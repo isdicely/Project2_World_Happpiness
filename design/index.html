@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>World Happiness Dashboard</title>
 </head>
 
@@ -20,13 +21,14 @@
             <strong>Dashboard</strong>
         </a>
         <!-- Adding a colapsible button as screen size decreases -->
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar nav ml-auto">
                 <!-- Dropdown menu -->
-                <li class="nav-item dropdown">
+                <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                         aria-expanded="false" style="color:black">Data</a>
                     <div class="dropdown-menu">
@@ -34,7 +36,8 @@
                         <a class="dropdown-item" href="report_methodology.html">Methodology</a>
                         <a class="dropdown-item" href="resources.html">Resources</a>
                     </div>
-                    <!-- Links -->
+                </div>
+                <!-- Links -->
                 <li class="nav-item">
                     <a class="nav-link" href="comparisons.html" style="color:black">Analysis</a>
                 </li>
