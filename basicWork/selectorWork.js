@@ -1,4 +1,6 @@
 // Created Empty Lists to push values to
+var filtered_country=[];
+
 var country_list = [];
 
 var uni_country_list = [];
@@ -50,9 +52,9 @@ function optionCountry(cname) {
     // console.log("data")
     // console.log(data)
   
-    filtered_country = data.filter(x => x["Country"] == cname )
-    console.log("filtered_country")
-    console.log(filtered_country)
+    var filtered_country1 = data.filter(x => x["Country"] == cname )
+    console.log("filtered_country:", filtered_country)
+    // console.log(filtered_country)
 
 
     filtered_country.map((d) => {
@@ -60,5 +62,5 @@ function optionCountry(cname) {
       console.log(d.Year)
     });  
   });
-
+  filtered_country.push(filtered_country1)
 }
