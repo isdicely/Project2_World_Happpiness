@@ -4,14 +4,14 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   //   Set Country dropdown menu
   const countryDropdownMenuSelection = d3.selectAll("#selCountry");
   const countryDropdownMenu = countryDropdownMenuSelection.node();
-  const unique_countries = new Set(data.map((entry) => entry.Country));
+  const uniqueCountries = new Set(data.map((entry) => entry.Country));
   // Add an empty opt to start of the list
-  const opt_all_countries = document.createElement("option");
-  opt_all_countries.value = "";
-  opt_all_countries.innerHTML = "---";
-  countryDropdownMenu.appendChild(opt_all_countries);
+  const optAllCountries = document.createElement("option");
+  optAllCountries.value = "";
+  optAllCountries.innerHTML = "---";
+  countryDropdownMenu.appendChild(optAllCountries);
   // Add opts for all contries to the dropdown menu
-  [...unique_countries].sort().forEach((country) => {
+  [...uniqueCountries].sort().forEach((country) => {
     const opt = document.createElement("option");
     opt.value = country;
     opt.innerHTML = country;
@@ -25,8 +25,8 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
 
   //   Remove the keys we do not want to graph.
   //   This will leave us with an array of the labels we want to put in the bar graph
-  const country_happiness_keys = allDataKeys.slice(4);
-  console.log(country_happiness_keys);
+  const countryHappinessKeys = allDataKeys.slice(4);
+  console.log(countryHappinessKeys);
 
   //   // USE THIS VALUE TO TEST GETTING THE DATA OUT OF THE OBJECT
   //   test_country_selected = "Mexico";
@@ -35,34 +35,35 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   // Only selecting the countries of of interest (country_happiness_keys)
   function getCountryValues() {
     //   Retrive selected county on dropdown menu
-    const country_selected = countryDropdownMenu.value;
-    console.log(country_selected);
+    const countrySelected = countryDropdownMenu.value;
+    console.log(countrySelected);
 
     // Retrive the data for country selected
-    const selected_country_information = data.filter(
-      (entry) => entry.Country === country_selected
+    const selectedCountryInformation = data.filter(
+      (entry) => entry.Country === countrySelected
     );
-    console.log(selected_country_information);
+    console.log(selectedCountryInformation);
 
     //   Feeding an array for the years of interest to get an objet with two arrays
     // Each array is key:value equivalet to "year of interest":"values of interest defined in country_happiness_keys"
     const dataArrayByYears = ["2019", "2020"].map((year) => {
-      const yearData = selected_country_information.find(
+      const yearData = selectedCountryInformation.find(
         (entry) => entry.Year === year
       );
 
-      return [year, country_happiness_keys.map((key) => yearData[key])];
+      return [year, countryHappinessKeys.map((key) => yearData[key])];
     });
     return Object.fromEntries(dataArrayByYears);
   }
-    // Use function to make graphs.
+    // Populate function to make graphs.
     // Get data for 2019: grahing_data[2019]
     // Get data for 2020: grahing_data[2020]
     function makeBarCharts() {
-        const graphing_data = getCountryValues();
-        console.log(graphing_data);
-        console.log(graphing_data[2019]);
-        console.log(graphing_data[2020]);
+        const graphingData = getCountryValues();
+        console.log(graphingData);
+        console.log(graphingData[2019]);
+        console.log(graphingData[2020]);
+        console.log(countryHappinessKeys);
     }
 
 
