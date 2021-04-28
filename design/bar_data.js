@@ -100,8 +100,8 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
             },
             bars: 'horizontal', // Required for Material Bar Charts.
             series: {
-              0: { axis: '2019' }, // Bind series 0 to an axis named 'distance'.
-              1: { axis: '2020' } // Bind series 1 to an axis named 'brightness'.
+              0: { axis: '2019' }, // Bind series 0 to an axis named '2019'.
+              1: { axis: '2020' } // Bind series 1 to an axis named '2020'.
             },
             axes: {
               x: {
