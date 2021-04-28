@@ -102,13 +102,13 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
             series: {
               0: { axis: '2019' }, // Bind series 0 to an axis named 'distance'.
               1: { axis: '2020' } // Bind series 1 to an axis named 'brightness'.
+            },
+            axes: {
+              x: {
+                2019: {label: ' '}, // Bottom x-axis.
+                2020: {side: 'top', label: ' '} // Top x-axis.
+              }
             }
-//             axes: {
-//               x: {
-//                 distance: {label: 'parsecs'}, // Bottom x-axis.
-//                 brightness: {side: 'top', label: 'apparent magnitude'} // Top x-axis.
-//               }
-//             }
           };
     
         var chart = new google.charts.Bar(document.getElementById('dual_x_div'));
