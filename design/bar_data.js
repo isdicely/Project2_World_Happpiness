@@ -2,6 +2,10 @@ graphingData2019 = []
 graphingData2020 = []
 graphingHeaders = []
 
+// graph1 = ""
+// graph2 = ""
+// graph3 = ""
+
 // Get data and display
 d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   console.log(data);
@@ -74,6 +78,9 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         graphingData2020 = graphingData2020.flat();
         graphingHeaders.push(countryHappinessKeys);
         graphingHeaders = countryHappinessKeys.flat();
+        // graph1 = graphingHeaders[0];
+        // graph2 = graphingData2019[0];
+        // graph3 = graphingData2020[0];
     }
 
 
