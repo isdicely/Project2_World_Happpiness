@@ -2,9 +2,6 @@ graphingData2019 = []
 graphingData2020 = []
 graphingHeaders = []
 
-// graph1 = ""
-// graph2 = ""
-// graph3 = ""
 
 // Get data and display
 d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
@@ -78,9 +75,47 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         graphingData2020 = graphingData2020.flat();
         graphingHeaders.push(countryHappinessKeys);
         graphingHeaders = countryHappinessKeys.flat();
-        // graph1 = graphingHeaders[0];
-        // graph2 = graphingData2019[0];
-        // graph3 = graphingData2020[0];
+                google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawStuff);
+    
+        function drawStuff() {
+          var data = new google.visualization.arrayToDataTable([
+            ['Happiness Measure', '2019 Numbers', '2020 Numbers'],
+            // [graph1, graph2, graph3]
+            [(graphingHeaders[0]), (graphingData2019[0]), (graphingData2020[0])],
+            [(graphingHeaders[1]), (graphingData2019[1]), (graphingData2020[1])],
+            [(graphingHeaders[2]), (graphingData2019[2]), (graphingData2020[2])],
+            [(graphingHeaders[3]), (graphingData2019[3]), (graphingData2020[3])],
+            [(graphingHeaders[4]), (graphingData2019[4]), (graphingData2020[4])],
+            [(graphingHeaders[5]), (graphingData2019[5]), (graphingData2020[5])],
+            [(graphingHeaders[6]), (graphingData2019[6]), (graphingData2020[6])],
+            [(graphingHeaders[7]), (graphingData2019[7]), (graphingData2020[7])]
+          ]);
+        
+          var options = {
+            width: 800,
+            chart: {
+              title: 'Happiness Measures by Country',
+              subtitle: '2019 in blue, 2020 in red'
+            },
+            bars: 'horizontal', // Required for Material Bar Charts.
+            series: {
+              0: { axis: '2019' }, // Bind series 0 to an axis named 'distance'.
+              1: { axis: '2020' } // Bind series 1 to an axis named 'brightness'.
+            },
+            axes: {
+              x: {
+                distance: {label: 'parsecs'}, // Bottom x-axis.
+                brightness: {side: 'top', label: 'apparent magnitude'} // Top x-axis.
+              }
+            }
+          };
+    
+        var chart = new google.charts.Bar(document.getElementById('dual_x_div'));
+        chart.draw(data, options);
+        };
+   
+      
     }
 
 
