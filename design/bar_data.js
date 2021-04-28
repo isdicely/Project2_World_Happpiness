@@ -73,7 +73,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         graphingData2020.push(graphingData[2020]);
         graphingData2020 = graphingData2019.flat();
         graphingHeaders.push(countryHappinessKeys);
-        graphingHeaders = graphingData2019.flat();
+        graphingHeaders = countryHappinessKeys.flat();
     }
 
 
