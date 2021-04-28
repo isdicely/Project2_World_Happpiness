@@ -69,8 +69,11 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         console.log(graphingData[2020]);
         console.log(countryHappinessKeys);
         graphingData2019.push(graphingData[2019]);
+        graphingData2019 = graphingData2019.flat();
         graphingData2020.push(graphingData[2020]);
+        graphingData2020 = graphingData2019.flat();
         graphingHeaders.push(countryHappinessKeys);
+        graphingHeaders = graphingData2019.flat();
     }
 
 
