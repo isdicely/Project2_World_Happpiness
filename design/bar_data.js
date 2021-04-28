@@ -1,3 +1,7 @@
+graphingData2019 = []
+graphingData2020 = []
+graphingHeaders = []
+
 // Get data and display
 d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   console.log(data);
@@ -64,6 +68,9 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         console.log(graphingData[2019]);
         console.log(graphingData[2020]);
         console.log(countryHappinessKeys);
+        graphingData2019.push(graphingData[2019]);
+        graphingData2020.push(graphingData[2020]);
+        graphingHeaders.push(countryHappinessKeys);
     }
 
 
