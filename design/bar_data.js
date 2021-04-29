@@ -78,8 +78,9 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         graphingData2020 = graphingData2020.flat();
         graphingHeaders.push(countryHappinessKeys);
         graphingHeaders = countryHappinessKeys.flat();
-                google.charts.load('current', {'packages':['bar']});
-        google.charts.setOnLoadCallback(drawStuff);
+        //start of the graphing
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
       // "+entry" turns string into an numeric type
         graphingData2020.forEach((entry) => {
           entry = +entry
@@ -88,8 +89,8 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
           entry = +entry
         })
 
-        function drawStuff() {
-          var data = new google.visualization.arrayToDataTable([
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
             ['Happiness Measures', '2019 Numbers', '2020 Numbers'],
             [(graphingHeaders[7]), (graphingData2019[7]), (graphingData2020[7])],
             [(graphingHeaders[6]), (graphingData2019[6]), (graphingData2020[6])],
@@ -103,30 +104,21 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
           ]);
         
           var options = {
-            width: 800,
             colors: ['#34b52d', '#e3d320'],
+            width: 800,
             chart: {
-              title: 'Happiness Measures by Country',
-              subtitle: '2019 in grey, 2020 in red'
+            title: 'Happiness Measures by Country',
+            subtitle: '2019 in green, 2020 in yellow',
             },
-            bars: 'horizontal', // Required for Material Bar Charts.
-            series: {
-              0: { axis: '2019' }, // Bind series 0 to an axis named '2019'.
-              1: { axis: '2020' } // Bind series 1 to an axis named '2020'.
-            },
-            axes: {
-              x: {
-                2019: {label: ' '}, // Bottom x-axis.
-                2020: {side: 'top', label: ' '} // Top x-axis.
-              }
-            }
+            
+            bars: 'horizontal' // Required for Material Bar Charts.
           };
-    
-        var chart = new google.charts.Bar(document.getElementById('dual_x_div'));
-        chart.draw(data, options);
+
+          var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+          chart.draw(data, google.charts.Bar.convertOptions(options));
         };
-   
-      
+
     }
 
 
