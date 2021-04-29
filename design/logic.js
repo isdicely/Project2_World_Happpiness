@@ -21,7 +21,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 // Load in geojson data
 //ADJUST RELATIVE PATH FOR DATA
-var geoData = "../data/Countries_with_happiness.geojson";
+var geoData = "../data/Countries_Extended_Happiness.geojson";
 console.log(geoData);
 
 var geojson;
@@ -32,7 +32,7 @@ d3.json(geoData).then(function (data) {
   geojson = L.choropleth(data, {
 
     // Define what  property in the features to use
-    valueProperty: "2020_happiness_score",
+    valueProperty: "happiness_score_2020",
 
     // Set color scale
     scale: ["#E60000", "#FFDE4D","#00802B"],
@@ -51,8 +51,7 @@ d3.json(geoData).then(function (data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function (feature, layer) {
-      //layer.bindPopup("Zip Code: " + feature.properties.ZIP + "<br>Population:<br>" + feature.properties.Pop_16);
-      layer.bindPopup(feature.properties.ADMIN +"<br>2020 Happiness Score: ");
+      layer.bindPopup(feature.properties.ADMIN +"<br>2020 Happiness Score: "+feature.properties.happiness_score_2020);
     }
   }).addTo(myMap);
 
