@@ -64,6 +64,9 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
     // Get data for 2019: grahing_data[2019]
     // Get data for 2020: grahing_data[2020]
     function makeBarCharts() {
+        graphingData2019 = [];
+        graphingData2020 = [];
+        graphingHeaders = [];
         const graphingData = getCountryValues();
         console.log(graphingData);
         console.log(graphingData[2019]);
