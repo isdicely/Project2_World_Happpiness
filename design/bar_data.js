@@ -106,7 +106,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
             width: 800,
             chart: {
               title: 'Happiness Measures by Country',
-              subtitle: '2019 in blue, 2020 in red'
+              subtitle: '2019 in grey, 2020 in red'
             },
             bars: 'horizontal', // Required for Material Bar Charts.
             series: {
