@@ -25,7 +25,7 @@ The project used a combination of Excel, html, Javascript, Google Charts, Geojso
 - A jupyter notebook file, analysis_plots.ipynb, that uses Pandas and Matplotlib to create regression plots stored as .pngs in the "output" folder within the "design" folder
 - style.css file, which creates the css used on the site
 A series of html files that together create our website via a series of links:
-- analysis.html which calls the .png files from the "output" folder
+- analysis.html, which calls the .png files from the "output" folder
 - data.html, which 
 - index.html, which
 - project_design.html, which 
