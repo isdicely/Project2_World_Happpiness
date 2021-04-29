@@ -80,7 +80,14 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         graphingHeaders = countryHappinessKeys.flat();
                 google.charts.load('current', {'packages':['bar']});
         google.charts.setOnLoadCallback(drawStuff);
-    
+      // "+entry" turns string into an numeric type
+        graphingData2020.forEach((entry) => {
+          entry = +entry
+        })
+        graphingData2019.forEach((entry) => {
+          entry = +entry
+        })
+
         function drawStuff() {
           var data = new google.visualization.arrayToDataTable([
             ['Happiness Measures', '2019 Numbers', '2020 Numbers'],
