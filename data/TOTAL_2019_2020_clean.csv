@@ -1,4 +1,4 @@
-Country,Region,Year,Happiness Rank,Happiness Score,Dystopia Residual,Explained by: Log GDP per capita,Explained by: Social support,Explained by: Healthy life expectancy,Explained by: Freedom to make life choices,Explained by: Generosity,Explained by: Perceptions of corruption
+Country,Region,Year,Happiness Rank,Happiness Score,Dystopia Residual,GDP per capita,Social support,Healthy life expectancy,Freedom to make life choices,Generosity,Perceptions of corruption
 Finland,Western Europe,2019,1,7.8087,2.7628,1.2852,1.4995,0.9613,0.6623,0.1597,0.4779
 Denmark,Western Europe,2019,2,7.6456,2.4327,1.3269,1.5034,0.9793,0.6650,0.2428,0.4953
 Switzerland,Western Europe,2019,3,7.5599,2.3503,1.3908,1.4724,1.0405,0.6290,0.2691,0.4079
