@@ -15,6 +15,7 @@ Our data measured a number of things per country:
 Each of these categories was given a numberical value, which was then added up to a total overall score called the Happiness Score. From this Happiness Score, the countries' rankings were determined. 
 
 ## Findings
+Most countries stayed within the same range for Happiness Scores and across all individual scores. The only three countries that did not stay the same were Afghanistan, Bangladesh, and Mexico.
 
 ## Data Sources
 - World Happiness Data: https://www.kaggle.com/mathurinache/world-happiness-report-20152021?select=2021.csv (source: https://worldhappiness.report/archive/)
