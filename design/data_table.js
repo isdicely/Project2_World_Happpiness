@@ -71,7 +71,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   }
   make_table(data);
 
-  let selectedRegion = regionDropdownMenu.value;
+  let lastSelectedRegion = regionDropdownMenu.value;
   function updateTable(event) {
     // Prevent the page from refreshing
     event.preventDefault();
@@ -80,13 +80,13 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
     
     // Retrive region selected
     const region_selected = regionDropdownMenu.value;
-    if (selectedRegion !== region_selected) {
-      selectedRegion = region_selected;
-      const hasRegion = selectedRegion !== "";
+    if (lastSelectedRegion !== region_selected) {
+      lastSelectedRegion = region_selected;
+      const hasRegion = lastSelectedRegion !== "";
       countryDropdownMenu.innerHTML = "";
       const regionCountries = new Set(
         data.flatMap((entry) =>
-          !hasRegion || selectedRegion === entry.Region ? entry.Country : []
+          !hasRegion || lastSelectedRegion === entry.Region ? entry.Country : []
         )
       );
       countryDropdownMenu.appendChild(opt_all_countries);
