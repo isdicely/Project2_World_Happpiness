@@ -8,7 +8,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   // Add a opt for all countries
   const opt_all_countries = document.createElement("option");
   opt_all_countries.value = "";
-  opt_all_countries.innerHTML = "---";
+  opt_all_countries.innerHTML = "[All Countries]";
   countryDropdownMenu.appendChild(opt_all_countries);
   // Add opts for all contries to the dropdown menu
   [...unique_countries].sort().forEach((country) => {
@@ -26,7 +26,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   // Add opt for no regions
   const opt_no_region = document.createElement("option");
   opt_no_region.value = "";
-  opt_no_region.innerHTML = "---";
+  opt_no_region.innerHTML = "[All Regions]";
   regionDropdownMenu.appendChild(opt_no_region);
   // Add opts for all regions
   [...unique_regions].sort().forEach((region) => {
@@ -71,15 +71,35 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   }
   make_table(data);
 
+  let selectedRegion = regionDropdownMenu.value;
   function updateTable(event) {
     // Prevent the page from refreshing
     event.preventDefault();
     // Clear any input
     while (tbody.firstChild) tbody.removeChild(tbody.lastChild);
-    // Retrive country selected
-    const country_selected = countryDropdownMenu.value;
+    
     // Retrive region selected
     const region_selected = regionDropdownMenu.value;
+    if (selectedRegion !== region_selected) {
+      selectedRegion = region_selected;
+      const hasRegion = selectedRegion !== "";
+      countryDropdownMenu.innerHTML = "";
+      const regionCountries = new Set(
+        data.flatMap((entry) =>
+          !hasRegion || selectedRegion === entry.Region ? entry.Country : []
+        )
+      );
+      countryDropdownMenu.appendChild(opt_all_countries);
+      [...regionCountries].sort().forEach((country) => {
+        const opt = document.createElement("option");
+        opt.value = country;
+        opt.innerHTML = country;
+        countryDropdownMenu.appendChild(opt);
+      });
+    }
+
+    // Retrive country selected
+    const country_selected = countryDropdownMenu.value;
     
     if (country_selected === "") {
       if (region_selected === "") {
@@ -89,7 +109,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
         const region_filtered_display_data = data.filter(
           (entry) => entry.Region === region_selected
         );
-        
+
         make_table(region_filtered_display_data);
       }
     } else {
@@ -103,7 +123,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
   }
   // Create event handler, set on chage
   countryDropdownMenuSelection.on("input", updateTable);
-  
+
   // move this to the new function***********
 
   regionDropdownMenuSelection.on("input", updateTable);
