@@ -24,7 +24,7 @@
     <!-- Using bootstrap for navbar logo "Dashboard" -->
     <nav class="navbar navbar-expand-lg rainbow-text">
         <!-- nav class="navbar navbar-expand-lg bg-transparent"> -->
-        <a class="navbar-brand mr-auto" href="index.html" style="color:white">Dashboard</a>
+        <a class="navbar-brand mr-auto" href="index.html" style="color:white">Overview</a>
         <!-- Adding a colapsible button as screen size decreases -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -55,18 +55,32 @@
         </div>
     </nav>
     <br><br>
-    <center><strong>
-            <h3>World Happiness Ratings for 2020</h3>
-        </strong></center>
-
-    <div class="container">
+    <div class="container"></div>
         <div class="row">
-            <div class="col-md-12 text-center intro-section" id="map" style="width: 900px; height: 500px;">
-                <!--happiness score heat map linked to "id="map"  -->
+            <div class="col-md-12">
+                <center><strong>
+                    <h3>Representation of The World Happiness Ratings in 2020</h3>
+                </strong></center>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <p style="font-size: large; text-align: center;">
+                Follow <a href="#selCountry">link</a> to select a country and display the happiness score and its
+                components.</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6" id="'barchart_material">
+            <div class="col-md-12 text-center intro-section" id="map" style="width: 900px; height: 500px;">
+            <!--happiness score heat map linked to "id="map"  -->
+            </div>
+        </div>
+    </div>
+    <div class="container" style="justify-content: center; align-items: center; padding-bottom: 10px; padding-top:10px">
+        <div class="row">
+            <div class="col-md-9" id="'barchart_material" style="align-items: center;">
                 <div>
                     <br><br>
                     <h5>Select a country to retrieve the happines score and its components</h5>
@@ -74,7 +88,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <!-- <div class="col-md-1"></div> -->
+            <div class="col-md-7">
                 <div class="well well-lg" style="color:white">
                     <h5>
                         <center>Country</center>
@@ -83,13 +98,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div>
-                </div>
-            </div>
-    <br><br>
-    <!-- </div> IF I REMOVE THIS div the bar chart moves way to the left -->
 
         <!--Map Resources-->
         <!--Leaflet JS-->
@@ -110,6 +118,7 @@
         <script src="bar_data.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <div id="barchart_material" style="width: 900px; height: 500px; margin-bottom: 100px"></div>
+    </div>
 </body>
 
 </html>
