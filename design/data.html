@@ -12,14 +12,14 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Data</title>
+    <title>Dataset</title>
 </head>
 
 <body>
     <!-- Using bootstrap for navbar logo "Dashboard" -->
     <nav class="navbar navbar-expand-lg rainbow-text">
         <!-- nav class="navbar navbar-expand-lg bg-transparent"> -->
-        <a class="navbar-brand mr-auto" href="index.html" style="color:white">Dashboard</a>
+        <a class="navbar-brand mr-auto" href="index.html" style="color:white">Overview</a>
         <!-- Adding a colapsible button as screen size decreases -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -53,46 +53,57 @@
     <br><br><br>
     <div class="bootstrap-iso">
         <div class="container-fluid">
-            <div clas="row"></div>
-            <div class="col-md-9 col-sm-6 col-xs-12">
+            <div clas="row">
+                <div class="col-md-12 col-sm-6 col-xs-12">
 
-                <h4>World Happiness Dataset for years 2019 and 2020</h4>
-                <br>
-            <div class="col-md-9 col-sm-6 col-xs-12">
+                    <h4 style="text-align: left">World Happiness Dataset (2019-2020)</h4>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12 col-sm-6 col-xs-12">
                     <p class='head_title'>
-                        Filter dataset by Region or Country
+                        The information in this table comprises of data collected in 2019 and 2020.
+                        <br>
+                        The table can be filtered by using the selectors below as such:
+                        <br>
+                        <ul>
+                            <li>Region and all countries in selected Region</li>
+                            <li>Individual country by selecting a Country under All Regions</li>
+                            <li>All Regions / All Countries selects all entries</li>
+                        </ul>
                     </p>
-            </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4">
-                    <div class="well well-lg" style="color:white">
-                        <h5>Region</h5>
-                        <select id="selRegion"></select>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <div class="well well-lg" style="color:white">
+                    <h5>Region</h5>
+                    <select id="selRegion"></select>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-4">
-                    <div class="well well-lg" style="color:white">
-                        <h5>Country</h5>
-                        <select id="selCountry"></select>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
             </div>
-            <br><br>
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Table with data -->
-                    <table class="table table-hover" style="text-align:center">
-                    </table>
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <div class="well well-lg" style="color:white">
+                    <h5>Country</h5>
+                    <select id="selCountry"></select>
                 </div>
-
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Table with data -->
+                <table class="table table-hover" style="text-align:center">
+                </table>
             </div>
 
         </div>
+
+    </div>
     </div>
 
 
