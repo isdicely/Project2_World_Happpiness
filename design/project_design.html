@@ -48,16 +48,74 @@
         </div>
     </nav>
     
-    <div >
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center intro-section">
-                    <!-- removed picture -->
-                </div>
+    <div class="container">
+        <!-- Unordered list of resources for the dataset -->
+        <div class="row">
+            <div class="col-md-12 body-section">
+                <h3>Project Design for Project 2: World Happiness Data Over the Last Two Years</h3>
+                <br>
+                <h4>Overview</h4>
+                <div style="padding-inline: 10px;">
+                    <p>After the year we have had in 2020, let's talk about happiness. What makes happy countries? For this project, we looked into global happiness data, mapped that data, and ran analyses to try and figure out what makes happy countries vs. unhappy countries. From the data, we will try to see if we can identify more or less resilient countries through the pandemic. 
+                    </p>
+                <br>
+                <h4>Data</h4>
+                <div style="padding-inline: 10px;">
+                    <p>Our data measured a number of things per country: </p>
+                <ul>
+                    <li>Dystopia Residual</li>
+                    <li>GDP per capita</li>
+                    <li>Social support</li>
+                    <li>Healthy life expectancy</li>
+                    <li>Freedom to make life choices</li>
+                    <li>Generosity</li>
+                    <li>Perceptions of corruption</li>
+                </ul>
+                <div style="padding-inline: 10px;">
+                <p>Each of these categories was given a numberical value, which was then added up to a total overall score called the Happiness Score. From this Happiness Score, the countries' rankings were determined. </p>
+                <br>
+                <h4>Data Sources</h4>
+                <div style="padding-inline: 10px;">
+                    <p>Both of the below can be found in our "data" folder:</p>
+                <ul>
+                    <li>World Happiness Data: https://www.kaggle.com/mathurinache/world-happiness-report-20152021?select=2021.csv (source: https://worldhappiness.report/archive/)</li>
+                    <li>Geo Data Used for the World Map: https://datahub.io/core/geo-countries#resource-countries</li>
+                </ul>
+                <br>
+                <h4>Project Artifacts</h4>
+                <div style="padding-inline: 10px;">
+                    <p>The project used a combination of Excel, html, Javascript, Google Charts, Geojsons, Mapbox, Leaflet, Pandas, and Matplotlib all stored within the "design" folder and consists of:
+                    </p>
+                <ul>
+                    <li>A jupyter notebook file, analysis_plots.ipynb, that uses Pandas and Matplotlib to create regression plots stored as .pngs in the "output" folder within the "design" folder</li>
+                    <li>style.css file, which creates the css used on the site</li>
+                </ul>
+                <div style="padding-inline: 10px;">
+                    <p>A series of html files that together create our website via a series of links:</p>
+                <ul>
+                    <li>analysis.html, which calls the .png files from the "output" folder</li>
+                    <li>data.html, which codes for the "Dataset" page of the website and codes for its table</li>
+                    <li>index.html, which codes for the "World Happiness Overview" page of the website</li>
+                    <li>project_design.html, which codes for the "Project Design" page of the website</li>
+                    <li>report_methodology.html, which codes for the "Poll Methodology" page of the website</li>
+                    <li>resources.html, which codes for the "Resources" page of the website</li>
+                    <li>visualizations.html, which codes for the "Visualizations" page of the website</li>
+                </ul>  
+                <div style="padding-inline: 10px;">
+                    <p>A series of .js Javascript files to create our data tables, bar graph data, and cloropleth maps, which consists of:</p>
+                <ul>
+                    <li>bar_data.js, which pulls in data from the .csv and creates the data for and the bar graph itself using Google Charts</li>
+                    <li>choropleth.js, which uses Geojsons, Mapbox, and Leaflet to create the choropleth heat map</li>
+                    <li>config.js, which contains the API key</li>
+                    <li>data_table.js, which pulls in data from the .csv and creates the data tables on our site</li>
+                    <li>logic.js, which codes for the heat map and Geojsons</li>
+
+                </ul>  
+                <br>
             </div>
         </div>
     </div>
 
 </body>
 
-</html>
+</html>                   
