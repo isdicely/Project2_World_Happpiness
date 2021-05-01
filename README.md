@@ -26,6 +26,7 @@ Both of the below can be found in our "data" folder:
 The project used a combination of Excel, html, Javascript, Google Charts, Geojsons, Mapbox, Leaflet, Pandas, and Matplotlib all stored within the "design" folder and consists of:
 - A jupyter notebook file, analysis_plots.ipynb, that uses Pandas and Matplotlib to create regression plots stored as .pngs in the "output" folder within the "design" folder
 - style.css file, which creates the css used on the site
+
 A series of html files that together create our website via a series of links:
 - analysis.html, which calls the .png files from the "output" folder
 - data.html, which codes for the "Dataset" page of the website and codes for its table
@@ -34,6 +35,7 @@ A series of html files that together create our website via a series of links:
 - report_methodology.html, which codes for the "Poll Methodology" page of the website 
 - resources.html, which codes for the "Resources" page of the website
 - visualizations.html, which codes for the "Visualizations" page of the website
+
 A series of .js Javascript files to create our data tables, bar graph data, and cloropleth maps, which consists of:
 - bar_data.js, which pulls in data from the .csv and creates the data for and the bar graph itself using Google Charts
 - choropleth.js, which uses Geojsons, Mapbox, and Leaflet to create the choropleth heat map
