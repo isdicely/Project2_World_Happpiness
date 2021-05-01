@@ -91,7 +91,7 @@ d3.csv("/data/TOTAL_2019_2020_clean.csv").then(function (data) {
 
         function drawChart() {
           var data = google.visualization.arrayToDataTable([
-            ['Happiness Measures', '2019 Numbers  ', '2020 Numbers  '],
+            ['Happiness Measures', '2019 Numbers  `', '2020 Numbers  `'],
             [(graphingHeaders[7]), (graphingData2019[7]), (graphingData2020[7])],
             [(graphingHeaders[6]), (graphingData2019[6]), (graphingData2020[6])],
             [(graphingHeaders[5]), (graphingData2019[5]), (graphingData2020[5])],
