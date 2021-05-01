@@ -28,15 +28,15 @@ The project used a combination of Excel, html, Javascript, Google Charts, Geojso
 - style.css file, which creates the css used on the site
 A series of html files that together create our website via a series of links:
 - analysis.html, which calls the .png files from the "output" folder
-- data.html, which 
-- index.html, which
-- project_design.html, which 
-- report_methodology.html, which 
-- resources.html, which 
-- visualizations.html, which
+- data.html, which codes for the "Dataset" page of the website and codes for its table
+- index.html, which codes for the "World Happiness Overview" page of the website
+- project_design.html, which codes for the "Project Design" page of the website
+- report_methodology.html, which codes for the "Poll Methodology" page of the website 
+- resources.html, which codes for the "Resources" page of the website
+- visualizations.html, which codes for the "Visualizations" page of the website
 A series of .js Javascript files to create our data tables, bar graph data, and cloropleth maps, which consists of:
 - bar_data.js, which pulls in data from the .csv and creates the data for and the bar graph itself using Google Charts
 - choropleth.js, which uses Geojsons, Mapbox, and Leaflet to create the choropleth heat map
-- config.js, which
+- config.js, which contains the API key
 - data_table.js, which pulls in data from the .csv and creates the data tables on our site
-- logic.js, which 
+- logic.js, which codes for the heat map and Geojsons
