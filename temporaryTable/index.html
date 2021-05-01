@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+</head>
+<style>
+    table#resultTable {
+     border-spacing: 5;
+     border-collapse: collapse;
+     background: #FFED86;
+     border-radius: 20px;
+     overflow: hidden;
+     max-width: 550px;
+     width: 50%;
+     margin: 10 auto;
+     position: center;
+   }
+   table#resultTable * {
+     position: center;
+   }
+   table#resultTable td, table#resultTable th {
+     padding-left: 10px;
+   }
+   table#resultTable thead tr {
+     height: 60px;
+     background: #FFED86;
+     font-size: 25px;
+   }
+   table#resultTable tbody tr {
+     height: 48px;
+     border-bottom: 5px solid #99e74a;
+   }
+   table#resultTable tbody tr:last-child {
+     border: 10;
+   }
+   table#resultTable td, table#resultTable th {
+     text-align: left;
+   }
+   table#resultTable td.l, table#resultTable th.l {
+     text-align: center;
+   }
+   table#resultTable td.c, table#resultTable th.c {
+     text-align: center;
+   }
+   table#resultTable td.r, table.resultTable th.r {
+     text-align: center;
+   }
+   
+   @media screen and (max-width: 35.5em) {
+     table#resultTable {
+       display: block;
+     }
+     table#resultTable > *, table#resultTable tr, table#resultTable td, table#resultTable th {
+       display: block;
+     }
+     table#resultTable thead {
+       display: none;
+     }
+     table#resultTable tbody tr {
+       height: auto;
+       padding: 8px 0;
+     }
+     table#resultTable tbody tr td {
+       padding-left: 45%;
+       margin-bottom: 12px;
+     }
+     table#resultTable tbody tr td:last-child {
+       margin-bottom: 0;
+     }
+     table#resultTable tbody tr td:before {
+       position: absolute;
+       font-weight: 700;
+       width: 40%;
+       left: 10px;
+       top: 0;
+     }
+     table#resultTable tbody tr td:nth-child(1):before {
+       content: "Country";
+     }
+     table#resultTable tbody tr td:nth-child(2):before {
+       content: "Happiness Rank";
+     }
+     table#resultTable tbody tr td:nth-child(3):before {
+       content: "Happiness Score";
+     }
+
+   }
+   body {
+     font: 400 14px 'Calibri','Arial';
+     padding: 10px;
+   }
+   
+   blockquote {
+     color: white;
+     text-align: center;
+   }
+   
+   </style>
+   
+<body>
+
+    <div>
+        <select name="data" id="selTable" onchange="optionChanged(this.value)">
+          <option>Select a Dataset</option>
+          <option value="happy2019">Happiest Countries in 2019</option>
+          <option value="happy2020">Happiest Countries in 2020</option>
+          <option value="mostaffect2019">Most Affected Countries 2019</option>
+          <option value="mostaffect2020">Most Affected Countries 2020</option>
+          
+        </select>
+      </div>
+      <div id="main">
+       <table id="resultTable">
+          <tr>
+            <th>Country</th>
+            <th>Happiness Rank</th>
+            <th>Happiness Score</th>
+      
+          </tr>
+    
+          <tbody></tbody>
+    
+        </table>
+      </div>
+
+      <div id="nineteen">
+        <table id="nineteenTable">
+           <tr>
+             <th></th>
+             <th></th>
+             <th></th>
+       
+           </tr>
+     
+           <tbody></tbody>
+     
+         </table>
+       </div>
+
+       <div id="twenty">
+        <table id="twentyTable">
+           <tr>
+             <th></th>
+             <th></th>
+             <th></th>
+       
+           </tr>
+     
+           <tbody></tbody>
+     
+         </table>
+       </div>
+
+       <div id="affected">
+        <table id="affectedTable">
+           <tr>
+             <th></th>
+             <th> </th>
+             <th> </th>
+       
+           </tr>
+     
+           <tbody></tbody>
+     
+         </table>
+       </div>
+    
+    
+        <script type="text/javascript" src="table.js"></script>
+</body>
+</html>

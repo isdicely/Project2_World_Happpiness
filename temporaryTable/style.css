@@ -1,0 +1,341 @@
+table#nineteenTable {
+  border-spacing: 2;
+  background:#e4d78e(181, 219, 109);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 550px;
+  width: 50%;
+  margin: 5 auto;
+  position: center;
+}
+table#nineteenTable td {
+  border-bottom: 2px solid #99e74a;
+}
+table#nineteenTable thead {
+  text-align: center;
+}
+table#nineteenTable * {
+  position: left;
+}
+table#nineteenTable td, table#nineteenTable th {
+  padding-left: 15px;
+}
+table#nineteenTable thead tr {
+  height: 60px;
+  background: #d1c166;
+  font-size: 20px;
+}
+table#nineteenTable tbody tr {
+  height: 48px;
+  border-bottom: 5px solid #99e74a;
+}
+table#nineteenTable tbody tr:last-child {
+  border: 10;
+}
+table#nineteenTable td, table#nineteenTable th {
+  text-align: center ;
+}
+table#nineteenTable td, table#nineteenTable th{
+  text-align: left ;
+}
+table#nineteenTable td, table#nineteenTable th {
+  text-align: left ;
+}
+
+@media screen and (max-width: 35.5em) {
+  table#nineteenTable {
+    display: block;
+  }
+  table#nineteenTable > *, table#nineteenTable tr, table#nineteenTable td, table#nineteenTable th {
+    display: block;
+  }
+  table#nineteenTable thead {
+    display: none;
+  }
+  table#nineteenTable tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  table#nineteenTable tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  table#nineteenTable tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table#nineteenTable tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table#nineteenTable tbody tr td:nth-child(1):before {
+    content: "Country";
+  }
+  table#nineteenTable tbody tr td:nth-child(2):before {
+    content: "Happiness Rank";
+  }
+  table#nineteenTable tbody tr td:nth-child(3):before {
+    content: "Happiness Score";
+  }
+/* --------------------------------------------------------------------------------------------------- */
+}
+table#twentyTable {
+  border-spacing: 5;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 550px;
+  width: 50%;
+  margin: 10 auto;
+  position: right;
+}
+table#twentyTable td {
+  border-bottom: 2px solid #99e74a;
+}
+table#twentyTable * {
+  position: right;
+}
+table#twentyTable td, table#twentyTable th {
+  padding-left: 15px;
+}
+table#twentyTable thead tr {
+  height: 60px;
+  background: #FFED86;
+  font-size: 17px;
+}
+table#twentyTable tbody tr {
+  height: 48px;
+  border-bottom: 5px solid #99e74a;
+}
+table#twentyTable tbody tr:last-child {
+  border: 10;
+}
+table#twentyTable thead {
+  text-align: center
+}
+table#twentyTable td {
+  text-align: left;
+}
+table#twentyTable td {
+  text-align: left;
+}
+table#twentyTable td {
+  text-align: left ;
+}
+
+@media screen and (max-width: 35.5em) {
+  table#twentyTable {
+    display: block;
+  }
+  table#twentyTable > *, table#twentyTable tr, table#twentyTable td, table#twentyTable th {
+    display: block;
+  }
+  table#twentyTable thead {
+    display: none;
+  }
+  table#twentyTable tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  table#twentyTable tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  table#twentyTable tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table#twentyTable tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table#twentyTable tbody tr td:nth-child(1):before {
+    content: "Country";
+  }
+  table#twentyTable tbody tr td:nth-child(2):before {
+    content: "Happiness Rank";
+  }
+  table#twentyTable tbody tr td:nth-child(3):before {
+    content: "Happiness Score";
+  }
+
+}
+/* -------------------------------------------------------------------------------------------- */
+table#affectedTable {
+  border-spacing: 5;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 550px;
+  width: 50%;
+  margin: 10 auto;
+  position: right;
+}
+table#affectedTable td {
+  border-bottom: 2px solid #99e74a;
+}
+table#affectedTable * {
+  position: right;
+}
+table#affectedTable td, table#affectedTable th {
+  padding-left: 15px;
+}
+table#affectedTable thead tr {
+  height: 60px;
+  background: #bda20b;
+  font-size: 17px;
+}
+
+table#affectedTable td, table#affectedTable th {
+  text-align: center;
+}
+table#affectedTable td, table#affectedTable th{
+  text-align: left;
+}
+table#affectedTable td, table#affectedTable th {
+  text-align: left;
+}
+
+
+@media screen and (max-width: 35.5em) {
+  table#affectedTable {
+    display: block;
+  }
+  table#affectedTable > *, table#affectedTable tr, table#affectedTable td, table#affectedTable th {
+    display: block;
+  }
+  table#affectedTable thead {
+    display: none;
+  }
+  table#affectedTable tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  table#affectedTable tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  table#affectedTable tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table#affectedTable tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table#affectedTable tbody tr td:nth-child(1):before {
+    content: "Country";
+  }
+  table#affectedTable tbody tr td:nth-child(2):before {
+    content: "Happiness Rank";
+  }
+  table#affectedTable tbody tr td:nth-child(3):before {
+    content: "Happiness Score";
+  }
+/* ---------------------------------------------------------------------- */
+table#resultTable {
+  border-spacing: 5;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 550px;
+  width: 50%;
+  margin: 10 auto;
+  position: right;
+}
+table#resultTable * {
+  position: right;
+}
+table#resultTable td, table.resultTable th {
+  padding-left: 10px;
+}
+table#resultTable thead tr {
+  height: 60px;
+  background: #FFED86;
+  font-size: 17px;
+}
+table#resultTable tbody tr {
+  height: 48px;
+  border-bottom: 5px solid #99e74a;
+}
+table#resultTable tbody tr:last-child {
+  border: 10;
+}
+table#resultTable td, table.resultTable th {
+  text-align: left;
+}
+table#resultTable th, table.resultTable th {
+  text-align: center;
+}
+table#resultTable td, table.resultTable th {
+  text-align: center;
+}
+table#resultTable td, table.resultTable th{
+  text-align: center;
+}
+
+@media screen and (max-width: 35.5em) {
+  table#resultTable {
+    display: block;
+  }
+  table#resultTable > *, table.resultTable tr, table.resultTable td, table.resultTable th {
+    display: block;
+  }
+  table#resultTable thead {
+    display: none;
+  }
+  table#resultTable tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  table#resultTable tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  table#resultTable tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table#resultTable tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table#resultTable tbody tr td:nth-child(1):before {
+    content: "Country";
+  }
+  table#resultTable tbody tr td:nth-child(2):before {
+    content: "Happiness Rank";
+  }
+  table#resultTable tbody tr td:nth-child(3):before {
+    content: "Happiness Score";
+  }
+
+}
+body {
+  font: 400 14px 'Calibri','Arial';
+  padding: 200px;
+}
+
+blockquote {
+  color: white;
+  text-align: center;
+}
+}
+body {
+  font: 400 14px 'Calibri','Arial';
+  padding: 20px;
+}
+
+blockquote {
+  color: white;
+  text-align: center;
+}
