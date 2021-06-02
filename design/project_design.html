@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Project Design</title>
+</head>
+
+<body>
+    <!-- Using bootstrap for navbar logo "Dashboard" -->
+    <nav class="navbar navbar-expand-lg wine-background-text">
+        <a class="navbar-brand mr-auto" href="project_design.html" style="color:black">
+            <strong>Project Design</strong>
+        </a>
+        <!-- Adding a colapsible button as screen size decreases -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar nav ml-auto">
+                <!-- Links -->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="color:black">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project_design.html" style="color:black">Project Design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wine_measurements.html" style="color:black">Wine Measurements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html" style="color:black">Dataset</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="visualizations.html" style="color:black">Visualizations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="analysis.html" style="color:black">Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resources.html" style="color:black">Resources</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- Unordered list of resources for the dataset -->
+        <div class="row">
+            <div class="col-md-12 body-section">
+                <h3>Project Design for Project 2: World Happiness Data Over the Last Two Years</h3>
+                <br>
+                <h4>Overview</h4>
+                    <p>After the year we have had in 2020, let's talk about happiness. What makes happy countries? For this project, we looked into global happiness data, mapped that data, and ran analyses to try and figure out what makes happy countries vs. unhappy countries. From the data, we will try to see if we can identify more or less resilient countries through the pandemic. 
+                    </p>
+                <br>
+                <h4>Data</h4>
+                    <p>Our data measured a number of things per country: </p>
+                <ul>
+                    <li>Dystopia Residual</li>
+                    <li>GDP per capita</li>
+                    <li>Social support</li>
+                    <li>Healthy life expectancy</li>
+                    <li>Freedom to make life choices</li>
+                    <li>Generosity</li>
+                    <li>Perceptions of corruption</li>
+                </ul>
+                <p>Each of these categories was given a numberical value, which was then added up to a total overall score called the Happiness Score. From this Happiness Score, the countries' rankings were determined. </p>
+                <br>
+                <h4>Data Sources</h4>
+                  <p>Our data comes from the World Happiness Report, source data and information can be found on the <a href="resources.html">Resources page</a> as well as in our "data" folder of the repo.</p>
+                <br>
+                <h4>Project Artifacts</h4>
+                    <p>The project used a combination of Excel, html, Javascript, Google Charts, Geojsons, Mapbox, Leaflet, Pandas, and Matplotlib all stored within the "design" folder and consists of:
+                    </p>
+                <ul>
+                    <li>A jupyter notebook file, analysis_plots.ipynb, that uses Pandas and Matplotlib to create regression plots stored as .pngs in the "output" folder within the "design" folder</li>
+                    <li>style.css file, which creates the css used on the site</li>
+                </ul>
+                    <p>A series of html files that together create our website via a series of links:</p>
+                <ul>
+                    <li>analysis.html, which calls the .png files from the "output" folder</li>
+                    <li>data.html, which codes for the "Dataset" page of the website and codes for its table</li>
+                    <li>index.html, which codes for the "World Happiness Overview" page of the website</li>
+                    <li>project_design.html, which codes for the "Project Design" page of the website</li>
+                    <li>report_methodology.html, which codes for the "Poll Methodology" page of the website</li>
+                    <li>resources.html, which codes for the "Resources" page of the website</li>
+                    <li>visualizations.html, which codes for the "Visualizations" page of the website</li>
+                </ul>  
+                    <p>A series of .js Javascript files to create our data tables, bar graph data, and cloropleth maps, which consists of:</p>
+                <ul>
+                    <li>bar_data.js, which pulls in data from the .csv and creates the data for and the bar graph itself using Google Charts</li>
+                    <li>choropleth.js, which uses Geojsons, Mapbox, and Leaflet to create the choropleth heat map</li>
+                    <li>config.js, which contains the API key</li>
+                    <li>data_table.js, which pulls in data from the .csv and creates the data tables on our site</li>
+                    <li>logic.js, which codes for the heat map and Geojsons</li>
+                </ul>  
+                <br>
+                <h4>Findings Recap</h4>
+                <p>Looking at the data we found that overall there were small shifts in happiness rankings among countries but no dramatic changes in countries happiness scores between 2019 and 2020. Countries on the higher end of the scale remained there while 
+                    countries at the lower end of the scale did the same.<br>There was also no significant trend of scores increasing or decreasing as a whole. Some countries happiness rating dropped for 2020 which is not too surprising but others increased overall.<br>
+                    The make up of the happiness ratings solidified some assumptions for our group such as there being a moderate association between a countries GDP per capita and healthy life expectancy. We were also somewhat surprised to find that the data showed there 
+                    was no relationship between a countries happiness score and its populations perception of corruption or its level of perceived generosity. More info on these associations can be found on the <a href="analysis.html">Analysis page.</a></p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>                   
